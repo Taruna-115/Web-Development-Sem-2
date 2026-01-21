@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting and TDZ(Temporal Dead Zone)</title>
+</head>
+<body>
+    <!-- HOISTING : Hoisting is the javascript mechanism which means that during the memory creation phase,
+      javascript allocates memory for variables and functions before executing any code-->
+
+    <!-- Execution in js is done in two phases: 1. Memory creation phase  2. Execution phase 
+        1. In memory creation phase, hoisting is done (means all the variables and functions are stored in memory)
+        2. In execution phase, execution is done on the basis of variables and functions stored in the memory -->
+    
+    
+    <script>
+        // var stores undefined value always 
+        console.log(x);  // now at the time of execution x stored in memory is undefined becoz of var
+        var x=10;       // now new value(10) is assigned to x
+        console.log(x);  //so here 10 will be printed
+        
+
+        // let and const stores the variable in TDZ(temporal dead zone)
+        // TDZ : It is the time period between hoisting(memory allocation) and initialisation of variables declared with let and const.
+        // ...during TDZ, the variable is freezed(means it exists in memory but cannot be accessed)
+        console.log(y);  //Error : variable can't be accessed before initialisation....becoz y is in TDZ now
+        let y=20;        //now y will be removed from TDZ and 20 value is assigned to it 
+        console.log(y)   // 20 will be printed
+
+
+        // functions store their whole body in memory (only in fxn declaration..means fxn not stored in any variable)
+        fun()          // this will print "Hello World" becoz fxn body is stored in memory
+        function fun(){
+            console.log("Hello World");
+        }
+
+        //fxn expression...when fxn stored in 'var'
+        a()       // undefined is stored in a...now we are calling a, so error will be there that a is not function
+        var a = function(){
+            console.log("Hello KRMU");
+        }
+
+        //fxn expression...when fxn stored in let or const
+        b()       // b is freezed in memory, so error will be there that b can't be accessed before initialisation
+        let b = function(){
+            console.log("Hello User");
+        }
+    </script>
+</body>
+</html>
