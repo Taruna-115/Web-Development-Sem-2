@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+<body>
+    <!-- DOM : It is a tool which is used to create tags(like html tags) in javascript for making website.
+        JS gives the soul of website(means make it working)
+         -->
+    
+    <p id="para1">This is para 1</p>
+
+    <p class="child">Child 1</p>
+    <p class="child">Child 2</p>
+    <p class="child">Child 3</p>
+
+    <p id="para" style="visibility: hidden; color:red">Hello World</p>
+
+    <!-- To convert the above tags in js: -->
+    <script>
+        // To get element using ID
+        let p1 = document.getElementById("para1")   // to make tag in js...we make object
+        console.log(p1)                //this will print whole p tag
+        console.log(p1.textContent)    //this will print only content of p
+
+
+        // To get element using class name
+        let c1 = document.getElementsByClassName("child")    // this is an array now(becoz multiple p tags are stored in p2)
+        // To print an array, we use loops:
+        for(let i=0; i<c1.length; i++){
+            console.log(c1[i]);                  //poore tags print honge
+        }
+        for(let i=0; i<c1.length; i++){
+            console.log(c1[i].textContent);      //content print hoga
+        }
+        
+
+        // One more method to do the same thing :
+        let p2 = document.querySelector("#para1")
+        console.log(p2.textContent)
+
+        let c2 = document.querySelectorAll(".child")
+        for(let i=0; i<c2.length; i++){
+            console.log(c2[i].textContent);
+        }
+
+
+        // Some more properties:
+        let p3 = document.querySelector("#para")
+        console.log(p3.innerText)       // This will not print the hidden text
+        console.log(p3.getAttribute("style"))  //this is used to get(print) the any attribute
+
+    </script>
+</body>
+</html>
