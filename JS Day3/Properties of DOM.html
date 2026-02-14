@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent"></div>
+    <script>
+        // How to create a tag using js :
+        let para1 = document.createElement("p")
+        console.log(para1)
+
+        // to add content :
+        let para2 = document.createElement("p")
+        para2.textContent = "This is para by DOM"
+        console.log(para2)
+
+        // To append (insert) a tag in div(which is in body)
+        // let para3 = document.querySelector("#parent")
+        // para3.textContent = "This is para 3 by DOM"
+        // parent.append(para3)
+
+
+        //styling using css
+        //para.style.cssText = "background-color:red; height:100px; width:200px;"
+    </script>
+</body>
+</html>
