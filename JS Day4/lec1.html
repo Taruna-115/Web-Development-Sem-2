@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- Events : method of interaction with website(e.g. clicking, typing, scrolling, dragging, hovering) -->
+     <!-- listener : fxn/action which will happen on performing event  -->
+    <!-- To change content of any paragraph using DOM -->
+     <p id="para1">This is para 1</p>
+     <script>
+        let child = document.querySelector("#para1")
+        console.log(child)
+        child.textContent = "This is child 1"
+     </script>
+
+     <!-- Make a button and then on clicking on that button, text will change  -->
+      <button id="clickbtn">Click me</button>
+      <script>
+        let clickbtn = document.querySelector("#clickbtn");
+        clickbtn.addEventListener("click", function(){
+            console.log("Hello World...")       //to add in console
+            // child.textcontent = "Hello Guys....."   //if hamko website me change krna h(ye smjh aayega when uper vala sab comment hoga or let child....vgera dobara likhenge)
+        })
+      </script>
+
+</body>
+</html>
