@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        *{
+            box-sizing : border-box;
+        }
+        #parent{
+            background-color: black;
+            height: 260px;
+            width: 407px;
+        }
+        #displaybox{
+            height: 100px;
+            width: 350px;
+            font-size: xx-large;
+            margin-left: 25px;
+            margin-top: 20px;
+        }
+        #usrbtn{
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            height: 50px;
+            width: 90px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <input id="displaybox" value="0">
+        <div id="usrbtn">
+            <button id="decbtn">-</button>
+            <button id="resetbtn">Reset</button>
+            <button id="incbtn">+</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
