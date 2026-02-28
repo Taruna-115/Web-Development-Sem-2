@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+    <style>
+        #parent{
+            border: 5px solid black;
+            height: 400px;
+            width: 400px;
+            align-content: center;
+        }
+        #child{
+            border: 5px solid red;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        parent
+        <div id="child">
+            child
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
